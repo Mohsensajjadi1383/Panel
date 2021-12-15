@@ -1,0 +1,41 @@
+.profile{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .profile-image-container{
+        img{
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 25px;
+            animation: showprofile;
+            animation-duration: 2s;
+            transition: opacity ease 2s;
+
+        }
+       
+    }
+    .profile-info-container{
+        .profile-info{
+
+        .profile-info-item{
+            color: #44494be1;
+            animation: showprofile;
+            animation-duration: 2s;
+            transition: opacity ease-out 2s;
+        }
+    }
+
+    }
+}
+
+@keyframes showprofile {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

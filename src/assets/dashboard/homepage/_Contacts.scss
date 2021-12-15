@@ -1,0 +1,211 @@
+.contacts-table{
+    overflow: auto;
+    height: 516px;
+    &::-webkit-scrollbar{
+        width: 1px;
+    }
+    &::-webkit-scrollbar-thumb{
+        width: 1px;
+    }
+
+    .contacts-row{
+        flex-direction: row;
+        transition: opacity ease-out 2s;
+        animation: showcontacts 2s ;
+        width: 98%;
+        flex: 0 0 auto;
+        &:hover{
+            box-shadow: 0.1px 0.1px 4px #00000036;
+            border-radius: 13px;
+        }
+
+        @keyframes showcontacts {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        cursor: default;
+        padding: 0.7rem 0;
+        margin: 0.3rem 0 ;
+
+        .contacts-row-item{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 0 0 auto ;
+            width: 19%;
+            overflow: hidden;
+
+
+
+          
+
+           img{
+               height: 44px;
+               width: 44px;
+               object-fit: cover;
+               border-radius: 12px;
+               margin-right: 8px;
+           }
+           .name-title{
+               font-weight: 600;
+               color: #44494bec;
+               font-size: 0.93rem;
+           }
+            p{
+                margin-bottom: 0;
+                color: #44494bc9;
+                font-weight: 400;
+                font-size: 0.93rem;
+                overflow: hidden;
+            }
+            
+
+        }
+
+     
+    }
+
+    .contact-tools{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 0 0 auto ;
+        width: 19%;
+        overflow: hidden;
+        .job-status-active{
+            padding: 0.2rem 0.8rem ;
+            background-color: #abd4f181;
+            color: #6dbbad;
+            font-size: 0.8rem;
+            border-radius: 6px;
+        }
+    }
+
+    .contacts-title-row{
+        padding: 0.3rem 0 ;
+        .contacts-title-row-item{
+            flex: 0 0 auto ;
+            width: 19%;
+            color: #abacac;
+            .contacts-title-item{
+                color: #abacac;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+.checkbox-container{
+    width: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company{
+    padding-left: 5px;
+}
+.deleteicon{
+    height: 44px;
+    width: 44px;
+    border-radius: 15px;
+    background-color: rgba(219, 233, 136, 0.153);
+    color: hsla(0, 100%, 51%, 0.747);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+.editicon{
+    height: 44px;
+    width: 44px;
+    border-radius: 15px;
+    background-color: hsla(205, 36%, 71%, 0.153);
+    color: hsla(197, 5%, 28%, 0.842);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+    .showtoolsicon{
+        transition: opacity ease 1s !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+
+.contact-tools{
+    justify-content: space-evenly;
+}
+
+.job-status-active-mobile{
+    display: none;
+    padding: 0.2rem 0.8rem ;
+    background-color: #abd4f181;
+    color: #6dbbad;
+    font-size: 0.8rem;
+    border-radius: 6px;
+}
+
+
+@media only screen and (max-width:850px) {
+    .job-status-active-mobile{
+        display: block !important;
+     }
+     .job-status-active{
+         display: none;
+     }
+    .contact-tools{
+        display: flex;
+         justify-content: space-evenly;
+         width: 100% !important;
+    }
+    .contacts-row{
+        width: 100%;
+        flex-direction: column !important;
+        .contacts-row-item{
+            width: 100% !important;
+            flex-direction: column !important;
+           img{
+               height: 44px;
+               width: 44px;
+               object-fit: cover;
+               border-radius: 12px;
+               margin-right: 8px;
+           }
+           .name-title{
+               font-weight: 600;
+               color: #44494bec;
+               font-size: 0.93rem;
+           }
+            p{
+                margin-bottom: 0;
+                color: #44494bc9;
+                font-weight: 400;
+                font-size: 0.93rem;
+                overflow: hidden;
+            }
+            .job-status-active{
+                padding: 0.2rem 0.8rem ;
+                background-color: #abd4f181;
+                color: #6dbbad;
+                font-size: 0.8rem;
+                border-radius: 6px;
+            }
+
+        }
+
+     
+    }
+}

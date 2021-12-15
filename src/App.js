@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React,{useState} from "react";
+import Routerview from './Routers/Router';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import MainContext from './Context'
 function App() {
+
+  const [HomePageActiveTab,SetHomePageActiveTab] = useState(1)
+  const [HomePageActiveTabTitle,SetHomePageActiveTabTitle] = useState("Profile & Security")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <MainContext.Provider value={{
+      HomePageActiveTab:HomePageActiveTab,
+      HomePageActiveTabTitle:HomePageActiveTabTitle,
+      SetTabStatus:(num,title) =>{
+        SetHomePageActiveTab(num)
+        SetHomePageActiveTabTitle(title) 
+      }
+      }}>
+
+    
+       <section className="h-100">
+       <Routerview/>
+
+         
+       </section>
+       </MainContext.Provider>
+         
+
+    
   );
 }
 

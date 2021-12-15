@@ -1,0 +1,123 @@
+.navigation-container{
+    display: none;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0.1px 0.1px 15px rgba(0, 0, 0, 0.041);
+    padding: 10px;
+    .navigation-bar{
+        margin-top: 1.5rem;
+
+    .navigation-item-container{
+        justify-content: space-evenly;
+        padding: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: #abacacce;
+        cursor: pointer;
+        &:hover{
+            color: #59bffe;
+            background-color: #abacac15;
+        }
+        .navigation-item{
+                       
+            h6{
+             margin-bottom: 0px;
+             font-size: 1rem;
+             font-weight: 500;
+            }
+          
+            .ico{
+                flex-basis: 35%;
+                font-size: 1.3rem;
+                font-weight: lighter;
+
+            }
+        }
+    }
+}
+
+
+}
+
+
+.navigation-footer{
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .upgrade-title{
+        color: #59bffe;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    .arrowright{
+       color: #59bffe;
+    }
+
+}
+
+
+.showmobilemenu{
+    @media only screen and (max-width:1024px) {
+        box-shadow: none !important;
+        transition: top left right ease 0.5s;
+        animation:showmenuanimation 0.5s ;
+        animation-fill-mode: forwards;
+        display: flex;
+        position: absolute;
+        // left: 0;
+        // right: 0;
+
+        // width: 100%;
+        // height: 100%;
+        // top: 0;
+        z-index: 10;
+        overflow: hidden;
+        .navigation-item-container{
+            justify-content: flex-end;
+        }
+        @keyframes showmenuanimation {
+            from{
+                left: 0;
+                top: 0;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+            }
+            // 50%{
+            //     left: 0;
+            //     top: 0;
+            //     height: 350px;
+            //     width: 350px;
+            //     border-radius: 50%;
+            //     opacity: 0.8;
+            // }
+            
+            to{
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                right: 0;
+                border-radius: 0px ;
+              
+            }
+        }
+    }
+}
+
+
+
+.mobile-menu-icon{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.6rem;  
+  }
+  .mobile-close-menu-icon{
+    color: #9d9e9e;
+    font-weight: 100;
+    font-size: 1.6rem;  
+    margin-left: 0.4rem;
+    margin-top: 0.5rem;
+  }

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap');
+@mixin circle($size,$background,$top,$right,$opacity) {
+    height: $size;
+    width: $size;
+    background-color: $background;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.login-form{
+    background-color: #ebecee;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0.1px 0.1px 7px #b8bfc8;
+    .login-title{
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Pacifico', cursive;
+        font-weight: bold;
+        font-size: 2rem;
+        color: #1a84fc;
+    }
+    input{
+        padding: 10px;
+        margin: 12px 7px 12px 7px ;
+        border: none;
+        border-radius: 20px;
+        color: #707070;
+        box-shadow: 0.1px 0.1px 1px #b8bfc8;
+
+        &:focus{
+          outline: none;  
+        }
+    }
+    button{
+        background-color: #029ec4;
+        color: #fff;
+        padding: 10px;
+        margin: 12px 7px 12px 7px ;
+        border: none;
+
+        border-radius: 20px;
+    }
+}
+.circle1{
+    @include circle(12rem,#1a84fc,10%,65%,0.4);
+
+}
+.circle2{
+    @include circle(9rem,#ef923e,19%,25%,0.8)
+}
+.circle3{
+    @include circle(13rem,#404e67,65%,57%,0.8);
+}
+
+
+    @media only screen and (max-width:720px) {
+    
+
+
+        @mixin ResponsiveAnimation($size,$opacity){
+
+            animation:circleanimate 4s infinite ;
+            transition: opacity ease-out , height ease-out ,width  ease-out;
+            @keyframes circleanimate {
+                0%{
+                   opacity: $opacity;
+                   height: $size;
+                   width: $size;
+                }
+                50%{
+                    opacity: $opacity - 0.2;
+                    height: $size - 1rem;
+                    width: $size - 1rem;    
+                }
+               
+                100%{
+                    opacity: $opacity;
+                    height: $size;
+                    width: $size;
+                }
+        
+             
+            }
+           }
+        .circle1{
+            height: 7rem;
+            width: 7rem ;
+            top: 12%;
+            right: 63%;
+            opacity: 0.4;
+            @include ResponsiveAnimation(7rem,0.4);
+     
+        }
+        .circle2{
+            height: 6rem ;
+            width: 6rem;
+            top: 19%;
+            right:6% ;
+            opacity: 0.8;
+            @include ResponsiveAnimation(6rem,0.8);
+        }
+        .circle3{
+            height: 9rem;
+            width: 9rem;
+            top: 71%;
+            opacity: 0.8;
+            @include ResponsiveAnimation(9rem,0.8);
+        }
+     
+     
+   
+     }
+     
+     
+     @media only screen and(min-width:720px){
+         
+
+
+        @mixin DesktopAnimation($size,$opacity){
+
+            animation:circleanimate 4s infinite ;
+            transition: opacity ease-out , height ease-out ,width  ease-out;
+            @keyframes circleanimate {
+                0%{
+                   opacity: $opacity;
+                   height: $size;
+                   width: $size;
+                }
+                50%{
+                    opacity: $opacity - 0.2;
+                    height: $size - 1rem;
+                    width: $size - 1rem;    
+                }
+               
+                100%{
+                    opacity: $opacity;
+                    height: $size;
+                    width: $size;
+                }
+        
+             
+            }
+           }
+   
+       
+         .circle1{
+            height: 7rem;
+            width: 7rem ;
+            top: 10%;
+            right: 65%;
+            opacity: 0.4;
+            @include DesktopAnimation(7rem,0.4);
+
+        }
+        .circle2{
+            height: 6rem ;
+            width: 6rem;
+            top: 19%;
+            right:25% ;
+            opacity: 0.8;
+            @include DesktopAnimation(6rem,0.8);
+
+     
+        }
+        .circle3{
+            height: 9rem;
+            width: 9rem;
+            top: 65%;
+            right: 57%;
+            opacity: 0.8;
+            @include DesktopAnimation(9rem,0.8);
+        }
+
+
+
+     
+     
+     }
+     
+   

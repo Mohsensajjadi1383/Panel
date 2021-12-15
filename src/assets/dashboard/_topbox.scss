@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap");
+
+.top-box-elements {
+    padding-top: 15px;
+    justify-content: space-evenly;
+}
+
+.profile-item {
+    height: 50px;
+    width: 50px;
+    background-color: #f1f3f741;
+    border-radius: 10px;
+    margin-left: 7px;
+    cursor: pointer;
+    .bell {
+        font-weight: lighter;
+        color: #fff;
+        font-size: 1.3rem;
+    }
+    .search {
+        font-weight: lighter;
+        color: #fff;
+        font-size: 1.3rem;
+    }
+}
+
+.profile-photo {
+    border: 2px solid #abacac;
+    overflow: hidden;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.show-page-title {
+    color: #fff;
+    font-weight: 400;
+}
+
+
+
+// .show-notif-modal{
+//     transition: width ease-in 2s;
+//     animation: showitem 2s;
+//     display: none;
+// }
+// .show-search-modal{
+// transition: width ease-in 2s;
+// animation: showitem 2s;
+// display: block;
+
+// }
+
+.search-input {
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    &:focus {
+        outline: none;
+    }
+}
+
+
+@mixin setsearchinput($inputwidth) {
+    
+.animation {
+    transition: width ease 1.5s;
+    animation: showitem 1.5s;
+    max-width: $inputwidth;
+    width: $inputwidth;
+}
+
+@keyframes showitem {
+    from {
+        width: 5px;
+        padding: 0;
+        visibility: hidden;
+    }
+    to {
+        width: $inputwidth;
+    }
+}
+
+.close-animation {
+    transition: width ease 1.5s;
+    animation: hideitem 1.5s;
+    animation-fill-mode: forwards;
+    // display: none;
+    // max-width: 5px;
+    // width: 5px;
+}
+
+@keyframes hideitem {
+    from {
+        width: $inputwidth;
+    }
+    to {
+        width: 0px;
+        padding: 0;
+        display: none;
+    }
+}
+}
+
+
+@media only screen and(min-width:500px){
+
+@include setsearchinput(250px)
+
+}
+
+@media only screen and (min-width:400px) and (max-width:500px){
+
+@include setsearchinput(170px)
+
+}
+
+@media only screen and (min-width:380px) and (max-width:500px){
+
+@include setsearchinput(140px)
+
+}
+
+@media only screen and (max-width:380px){
+
+@include setsearchinput(100px)
+
+}
+
+
+
+

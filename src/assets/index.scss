@@ -1,0 +1,13 @@
+@import 'dashboard';
+
+body{
+    background-color:#f1f3f7 ;
+}
+a{
+    text-decoration: none !important;
+}
+
+.actived-route > div{
+    color: #59bffe !important;
+    background-color: #abacac15 !important;
+}

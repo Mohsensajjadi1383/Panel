@@ -1,0 +1,71 @@
+.homepage-navigation {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow-x: auto;
+    width: 100%;
+    box-shadow: 0 8px 6px -6px #00000012;
+    margin-bottom: 10px;
+    &::-webkit-scrollbar {
+        height: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+        height: 0px;
+    }
+    .homepage-navigation-item {
+        cursor: pointer;
+        padding: 1.1rem 1rem 1.1rem 1rem;
+        .homepage-navigation-icon {
+            font-size: 1.8rem;
+            padding-right: 7px;
+        }
+        .homepage-navigation-text {
+            margin-bottom: 0;
+            white-space: nowrap;
+            color: #44494b;
+        }
+
+        &:hover {
+            background-color: #abacac15;
+        }
+    }
+}
+
+.usercircle {
+    color: #fe9a08;
+}
+.signature {
+    color: #59bffe;
+}
+.contactsbook {
+    color: #21cbab;
+}
+.attachment {
+    color: #ce8385;
+}
+.plancard {
+    color: #abacac;
+}
+.active-tab{
+    border-bottom: 3px solid #abacac;    
+    transition: border-bottom ease-out 1s;
+    animation:setactivetab 1s ;
+    
+}
+@keyframes setactivetab {
+    from{
+        border-bottom: 3px solid #abacac31;    
+    }
+    to{
+        border-bottom: 3px solid #abacac;    
+
+    }
+}
+
+@media only screen and(min-width:1024px){
+    .homepage-navigation{
+       justify-content: space-evenly;
+    }  
+}
+
